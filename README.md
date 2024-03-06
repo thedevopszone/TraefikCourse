@@ -27,7 +27,7 @@ podman run -d --name traefik -p 80:80 -p 8080:8080 -v ./traefik.yml:/etc/traefik
 ```
 
 ```
-podman run -d --name whoami -l traefik.http.routers.whoami.rule="Host(`whoami.docker.localhost`)" containous/whoami:latest
+podman run -d --name whoami -l traefik.http.routers.whoami.rule="Host(`whoami.docker.localhost`)" docker.io/containous/whoami:latest
 
 ```
 
