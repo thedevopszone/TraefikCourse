@@ -6,7 +6,7 @@ providers:
   docker:
     watch: true
     exposedByDefault: false
-    swarmMode: false
+#    swarmMode: false
 #Logging
 log:
   level: INFO # In production WARNING or ERROR
