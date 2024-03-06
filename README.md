@@ -26,7 +26,10 @@ sudo sysctl --system
 podman run -d --name traefik -p 80:80 -p 8080:8080 -v ./traefik.yml:/etc/traefik/traefik.yml docker.io/traefik:v3.0
 ```
 
+```
+podman run -d --name whoami -l traefik.http.routers.whoami.rule="Host(`whoami.docker.localhost`)" containous/whoami:latest
 
+```
 
 ## Welcome to this course
 This repository is part of a udemy course called Routing with Traefik: Learn Traefik in less than 5 hours
