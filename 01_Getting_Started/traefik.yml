@@ -9,7 +9,7 @@ providers:
     swarmMode: false
 #Logging
 log:
-  level: INFO
+  level: INFO # In production WARNING or ERROR
 
 #Entrypoints
 entryPoints:
