@@ -4,10 +4,17 @@
 
 
 ```
+sudo firewall-cmd --permanent --zone=public --add-port=22/tcp
 sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
 sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
 sudo firewall-cmd --permanent --zone=public --add-port=443/tcp
 sudo firewall-cmd --reload
+
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 8080
+sudo ufw allow 443
+sudo ufw enable
 ```
 
 ```
