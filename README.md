@@ -4,6 +4,13 @@
 
 
 ```
+sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
+sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
+sudo firewall-cmd --permanent --zone=public --add-port=443/tcp
+sudo firewall-cmd --reload
+```
+
+```
 echo net.ipv4.ip_unprivileged_port_start = 80 | sudo tee /etc/sysctl.d/90-unprivileged_port_start.conf
 sudo sysctl --system
 ```
