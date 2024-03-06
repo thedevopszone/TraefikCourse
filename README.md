@@ -1,4 +1,19 @@
 # Traefik training for absolute beginners
+
+## Podman run
+
+
+```
+echo net.ipv4.ip_unprivileged_port_start = 80 | sudo tee /etc/sysctl.d/90-unprivileged_port_start.conf
+sudo sysctl --system
+```
+
+```
+podman run -d --name traefik -p 80:80 -p 8080:8080 -v ./traefik.yml:/etc/traefik/traefik.yml docker.io/traefik:v3.0
+```
+
+
+
 ## Welcome to this course
 This repository is part of a udemy course called Routing with Traefik: Learn Traefik in less than 5 hours
 You can find the videos here: 
